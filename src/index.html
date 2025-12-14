@@ -8,13 +8,18 @@
 <body>
     <header>
         <h1>Fridgy</h1>
+        <p><strong>Rezepte aus dem, was du schon zu Hause hast.</strong></p>
         <hr>
     </header>
     
     <main>
-    <h3>Für was dient denn unsere App?</h3>
+        <h3>Was ist Fridgy überhaupt?</h3>
+        <p>Bei Fridgy handelt es sich um eine App, welches unseren Zielgruppen das zubereiten von Speisen erleichtert</p>
+        <br>
+
+        <h3>Für was dient denn unsere App?</h3>
         <div class="description">
-            <p style="background-color:green; color: yellow;">Unsere App sollte dazu dienen das 
+            <p>Unsere App sollte dazu dienen das 
             Einkaufen für unsere Zielgruppen zu erleichtern, somit 
             ermöglicht es unseren Zielgruppen Rezepte von Lebensmitteln
             auf den eigenen Belegen oder vom Kühlschrank
@@ -22,19 +27,62 @@
             einem die Arbeit wegnimmt ein Rezept zu suchen?
             </p>
         </div>
-    </main>
+        <h4 id="principle">Prinzip unserer App:</h4>
+            <li>
+                <ol>Problem: Menschen wissen nicht, was sie kochen sollen</ol>
+                <ol>Lösung: Lebensmittel werden in der App eingescannt</ol>
+                <ol>Nutzen: Durch die eingescannten Lebensmittel werden Rezepte erzeugt.</ol>
+            </li>
+        <br>
 
-    <footer style="display: flex;  align-items: flex-end;">
+        <h3>Was sind denn unsere Zielgruppen?</h3>
+        <li id="groups_list">
+            <ul>Schüler/innen</ul>
+            <ul>Familie</ul>
+            <ul>Studierende</ul>
+            <ul>und vieles mehr</ul>
+        </li>
+    </main>
+    
+    <footer>
         <hr>
         <div class="Impressum">
             Geografische Lage: HTL-Rankweil, Negrellistraße 51 <br>
             Geschäftsführer: Muhammet Altuntas <br>
+            Marketing: <br>
+            IT: <br>
+            Finanzen: <br>
             Unternehmen: Fridgy@junior-Company.at
 
         </div>
 
     </footer>
     
-    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(115, 247, 195, 0.8);
+        }
+
+        header, main, footer {
+            background-color: rgba(88, 228, 70, 0.8);
+            margin: 7.5px;
+            padding: 7.5px;
+        }
+
+        #groups_list {
+            color: rgb(255, 250, 160);
+            background-color: rgba(25, 235, 80, 1);
+        }
+
+        .description p {
+            padding: 20px;
+            color: rgb(255, 250, 160);
+            background-color: rgba(25, 235, 80, 1);
+        }
+    </style>
 </body>
 </html>
