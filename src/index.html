@@ -12,6 +12,7 @@
         <hr>
     </header>
     
+
     <main>
         <h3>Was ist Fridgy überhaupt?</h3>
         <p>Bei Fridgy handelt es sich um eine App, welches unseren Zielgruppen das zubereiten von Speisen erleichtert</p>
@@ -27,84 +28,144 @@
             einem die Arbeit wegnimmt ein Rezept zu suchen?
             </p>
         </div>
-        <h4 id="principle">Prinzip unserer App:</h4>
-            <li>
-                <ol>Problem: Menschen wissen nicht, was sie kochen sollen</ol>
-                <ol>Lösung: Lebensmittel werden in der App eingescannt</ol>
-                <ol>Nutzen: Durch die eingescannten Lebensmittel werden Rezepte erzeugt.</ol>
-            </li>
+        <h4 >Prinzip unserer App:</h4>
+            <ol id="principle">
+                <li>Problem: Menschen wissen nicht, was sie kochen sollen</li>
+                <li>Lösung: Lebensmittel werden in der App eingescannt</li>
+                <li>Nutzen: Durch die eingescannten Lebensmittel werden Rezepte erzeugt.</li>
+            </ol>
         <br>
 
         <h3>Was sind denn unsere Zielgruppen?</h3>
-        <li id="groups_list">
-            <ul>Schüler/innen</ul>
-            <ul>Familie</ul>
-            <ul>Studierende</ul>
-            <ul>und vieles mehr</ul>
-        </li>
+        <ul id="groups_list">
+            <li>Schüler/innen</li>
+            <li>Familie</li>
+            <li>Studierende</li>
+            <li>und vieles mehr</li>
+        </ul>
     </main>
+
     
     <footer>
         <hr>
         <div class="Impressum">
-            Geografische Lage: HTL-Rankweil, Negrellistraße 51 <br>
-            Geschäftsführer: Muhammet Altuntas <br>
-            Marketing: <br>
-            IT: <br>
-            Finanzen: <br>
-            Unternehmen: Fridgy@junior-Company.at
-
+            <div>Geografische Lage:<br>HTL-Rankweil<br>Negrellistraße 51</div>
+            <div>Geschäftsführer:<br>Muhammet Altuntas</div>
+            <div>Marketing:<br>–</div>
+            <div>IT:<br>–</div>
+            <div>Finanzen:<br>–</div>
+            <div>Kontakt:<br>Fridgy@junior-company.at</div>
         </div>
 
     </footer>
     
+
     <style>
         * {
             box-sizing: border-box;
         }
 
         body {
-            background-color: rgba(125, 255, 115, 0.8);
+            background-color: rgba(5, 125, 5, 0.8);
+            animation: backgroundchange 10s ease-in-out infinite;
         }
 
         header, main, footer {
             font-size: 18px;
-            background-color: rgba(88, 228, 70, 0.8);
+            background-color: rgba(88, 198, 70, 0.8);
             margin: 7.5px;
             padding: 7.5px;
+            color: #fff;
+            text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        #groups_list, #principle {              
+            padding: 20px;
             
+            flex-direction: row;
+            animation: changecolor 6s ease-in-out infinite;
         }
 
-        #groups_list {
-            padding: 20px;
-            color: rgb(255, 250, 160);
-            background-color: rgba(25, 235, 80, 1);
-            animation: colourchange 3.2s ease-in-out infinite alternate;
-        }
+        
 
         .description p {
             padding: 20px;
             color: rgb(255, 250, 160);
-            background-color: rgba(25, 235, 80, 1);
-            animation: colourchange 3.2s ease-in-out infinite alternate;
+            animation: changecolor 6s ease-in-out infinite;
         }
 
-        @keyframes colourchange {
-             0% {
-                background-color: rgba(75, 245, 80, 0.8);
-                color: rgba(255, 255, 255, 1); 
+        .Impressum {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        @media (max-width: 780px) {
+            header, main, footer {
+                font-size: 16.5px;
+                background-color: rgba(88, 208, 70, 0.8);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 10px;         
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+        @keyframes backgroundchange {
+            0% {
+                background-color: rgba(240, 255, 255, 0.8);
             }
 
             50% {
-                background-color: rgba(45, 235, 80, 1);
-                color: rgb(255, 250, 160); 
+                background-color: rgba(210, 255, 255, 0.8);
             }
 
             100% {
-                background-color: rgba(75, 245, 80, 0.8);
-                color: rgba(255, 250, 255, 1); 
+                background-color: rgba(240, 255, 255, 0.8);
             }
         }
+
+
+        @keyframes changecolor {
+             0% {
+                background-color: rgba(80, 205, 80, 0.8);
+                color: rgba(255, 255, 255, 0.9); 
+            }
+
+            50% {
+                background-color: rgba(85, 220, 80, 0.8);
+                color: rgba(255, 250, 200, 1); 
+            }
+
+            100% {
+                background-color: rgba(80, 205, 80, 0.8);
+                color: rgba(255, 250, 255, 0.9); 
+            }
+        }
+
+        /*TODO:Link auf insta und das Impressum sollte gerade.*/
     </style>
 </body>
 </html>
