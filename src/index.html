@@ -64,24 +64,46 @@
         }
 
         body {
-            background-color: rgb(115, 247, 195, 0.8);
+            background-color: rgba(125, 255, 115, 0.8);
         }
 
         header, main, footer {
+            font-size: 18px;
             background-color: rgba(88, 228, 70, 0.8);
             margin: 7.5px;
             padding: 7.5px;
+            
         }
 
         #groups_list {
+            padding: 20px;
             color: rgb(255, 250, 160);
             background-color: rgba(25, 235, 80, 1);
+            animation: colourchange 3.2s ease-in-out infinite alternate;
         }
 
         .description p {
             padding: 20px;
             color: rgb(255, 250, 160);
             background-color: rgba(25, 235, 80, 1);
+            animation: colourchange 3.2s ease-in-out infinite alternate;
+        }
+
+        @keyframes colourchange {
+             0% {
+                background-color: rgba(75, 245, 80, 0.8);
+                color: rgba(255, 255, 255, 1); 
+            }
+
+            50% {
+                background-color: rgba(45, 235, 80, 1);
+                color: rgb(255, 250, 160); 
+            }
+
+            100% {
+                background-color: rgba(75, 245, 80, 0.8);
+                color: rgba(255, 250, 255, 1); 
+            }
         }
     </style>
 </body>
