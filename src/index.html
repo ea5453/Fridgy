@@ -7,6 +7,12 @@
 </head>
 <body>
     <header>
+        <div class="Reiter">
+            <ul id="reiter_list">
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Instagram</a></li>
+            </ul>
+        </div>
         <h1>Fridgy</h1>
         <p><strong>Rezepte aus dem, was du schon zu Hause hast.</strong></p>
         <hr>
@@ -66,13 +72,12 @@
         }
 
         body {
-            background-color: rgba(5, 125, 5, 0.8);
             animation: backgroundchange 10s ease-in-out infinite;
         }
 
         header, main, footer {
             font-size: 18px;
-            background-color: rgba(88, 198, 70, 0.8);
+            background-color: rgba(91, 175, 76, 0.85);
             margin: 7.5px;
             padding: 7.5px;
             color: #fff;
@@ -112,9 +117,10 @@
             #groups_list, #principle {     
                 display: flex;
                 flex-direction: row;
-                gap: 10px;         
+                gap: 15px;         
                 padding: 15px;
                 animation: changecolor 5.5s ease-in-out infinite alternate;
+                list-style: none;
             }
 
             #group_list li {
@@ -150,17 +156,17 @@
 
         @keyframes changecolor {
              0% {
-                background-color: rgba(80, 205, 80, 0.8);
+                background-color: rgba(80, 195, 80, 0.8);
                 color: rgba(255, 255, 255, 0.9); 
             }
 
             50% {
-                background-color: rgba(85, 220, 80, 0.8);
+                background-color: rgba(91, 175, 76, 0.85);
                 color: rgba(255, 250, 200, 1); 
             }
 
             100% {
-                background-color: rgba(80, 205, 80, 0.8);
+                background-color: rgba(80, 195, 80, 0.8);
                 color: rgba(255, 250, 255, 0.9); 
             }
         }
