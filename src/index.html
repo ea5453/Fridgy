@@ -9,12 +9,11 @@
     <header>
         <div class="Reiter">
             <ul id="reiter_list">
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Instagram</a></li>
+                <li><a href="https://www.instagram.com/fridgy_company/" target="_blank">Instagram</a></li>
             </ul>
         </div>
         <h1>Fridgy</h1>
-        <p><strong>Rezepte aus dem, was du schon zu Hause hast.</strong></p>
+        <p><strong>Rezepte aus dem, was Sie schon zu Hause hast.</strong></p>
         <hr>
     </header>
     
@@ -43,6 +42,7 @@
         <br>
 
         <h3>Was sind denn unsere Zielgruppen?</h3>
+        
         <ul id="groups_list">
             <li>Schüler/innen</li>
             <li>Familie</li>
@@ -73,26 +73,35 @@
         }
 
         body {
-            animation: backgroundchange 10s ease-in-out infinite;
+            background-color: rgba(240, 255, 255, 0.85);
+            animation: backgroundchange 5s ease-in-out infinite;
         }
 
         header, main, footer {
             font-size: 18px;
-            background-color: rgba(91, 165, 76, 0.85);
+            background-color: rgba(91, 165, 76, 0.9);
             margin: 7.5px;
             padding: 7.5px;
-            color: #fff;
+            color: rgba(255, 255, 255, 0.95);
             text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        header {
+            top: 1%;
+        }
+
+        .Reiter {
+            background-color: rgba(100,170,80, 0.6);
         }
         
         #groups_list, #principle {              
             padding: 20px;
-            animation: changecolor 10s ease-in-out infinite;
+            animation: changecolor 14s ease-in-out infinite;
         }
 
         .description p {
             padding: 20px;
-            animation: changecolor 10s ease-in-out infinite;
+            animation: changecolor 14s ease-in-out infinite;
         }
 
         .Impressum {
@@ -101,19 +110,26 @@
         }
 
         @keyframes changecolor {
-             0% {
-                background-color: rgba(91, 165, 76, 1);
-                color: rgba(255, 255, 255, 0.9); 
+            0% {
+                background-color: rgba(91, 170, 76, 0.9);
             }
-
             50% {
-                background-color: rgba(91, 175, 76, 1);
-                color: rgba(255, 250, 200, 1); 
+                background-color: rgba(94, 172, 80, 0.9);
             }
-
             100% {
-                background-color: rgba(91, 165, 76, 1);
-                color: rgba(255, 250, 255, 0.9); 
+                background-color: rgba(91, 170, 76, 0.9);
+            }
+        }
+
+        @keyframes backgroundchange {
+            0% {
+                background-color: rgba(176, 202, 236, 0.85);
+            }
+            50% {
+                background-color: rgba(176, 202, 226, 0.85);
+            }
+            100% {
+                background-color: rgba(176, 202, 236, 0.85);
             }
         }
 
@@ -168,19 +184,7 @@
         }
 
 
-        @keyframes backgroundchange {
-            0% {
-                background-color: rgba(240, 255, 255, 0.8);
-            }
-
-            50% {
-                background-color: rgba(210, 255, 255, 0.8);
-            }
-
-            100% {
-                background-color: rgba(240, 255, 255, 0.8);
-            }
-        }
+       
 
 
         
