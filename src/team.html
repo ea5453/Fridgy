@@ -22,16 +22,27 @@
 
     <main>
         <div class="tablespacer">
-            <div class="tables">
+            <div class="tables" id="ManagerPic">
                 <table border="1" cellpadding="50" cellspacing="0" id="team_list">
                     <thead>
                         <tr>
                             <th>Geschäftsführer</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>
+                                <div class="container">
+                                    <div class="ManagerTable"></div>
+                                </div>
+                                <strong>Muhammet Altuntas</strong>
+                               <p>
+                                    <a href="mailto:muhammet.altuntas@htl-rankweil.at?subject=Betreff&body=Text">
+                                        muhammet.altuntas@htl-rankweil.at
+                                    </a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -49,7 +60,14 @@
                     <br>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>
+                                <strong>Kenan Pipic</strong>
+                                  <p>
+                                    <a href="mailto:kenan.pipic@htl-rankweil.at?subject=Betreff&body=Text">
+                                       kenan.pipic@htl-rankweil.at
+                                    </a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -67,7 +85,14 @@
                     <br>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>
+                                <strong>Emir Alici</strong>
+                                  <p>
+                                    <a href="mailto:emir.alici@htl-rankweil.at?subject=Betreff&body=Text">
+                                       emir.alici@htl-rankweil.at
+                                    </a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -80,13 +105,20 @@
                 <table border="1" cellpadding="50" cellspacing="0" id="team_list">
                     <thead>
                         <tr>
-                            <th>IT</th>
+                            <th>Developement</th>
                         </tr>
                     </thead>
                     <br>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>
+                                <strong>Christof Schaffer</strong>
+                                  <p>
+                                    <a href="mailto:christof.schaffer@htl-rankweil.at?subject=Betreff&body=Text">
+                                      christof.schaffer@htl-rankweil.at
+                                    </a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,7 +137,21 @@
                     <br>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>
+                                <strong>Tobias Reichart</strong>
+                                <p>
+                                    <a href="mailto:tobias.reichart@htl-rankweil.at?subject=Betreff&body=Text">
+                                       tobias.reichart@htl-rankweil.at
+                                    </a>
+                                </p>
+
+                                <strong>Jakob Seeberger</strong>
+                                <p>
+                                    <a href="mailto:jakob.seeberger@htl-rankweil.at?subject=Betreff&body=Text">
+                                      jakob.seeberger@htl-rankweil.at
+                                    </a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -183,12 +229,34 @@
             background-color: rgba(80, 150, 65, 0.9);
         }
 
+        /*
+        .container{
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;  
+        }
+        */
+
+        .ManagerTable{
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            
+        }
+
 
         .tablespacer {
             width: 70%;
             margin: 2%;
         }
-
+      
+        #ManagerPic{
+            height: 50px;
+            width: 50px;
+            color: black;
+        }
+        
 
         .tables, .tablesr {
             width: 130%;
@@ -226,6 +294,9 @@
             display: flex;
             justify-content: space-around;
         }
+
+
+      
         
         @keyframes movetable {
             from {
