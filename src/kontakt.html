@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams unserer Firma</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Hier ist unser Team</h1>
-        <hr>
+        <h1>Kontakt</h1>
     </header>
 
     <main>
-        <div>
-            <ul id="team_list">
-                <li>Marketing</li>
-                <li>IT</li>
-                <li>CEO</li>
-                <li>Finanzen</li>
-                <li>Design</li>
-            </ul>
+        <h2>CEO</h2>
+        <div id="CEO_list">
+            <p style="font-size: 20px;">Muhammet Altuntas</p>
         </div>
         
     </main>
@@ -48,13 +42,23 @@
             padding: 7.5px;
             color: rgba(255, 255, 255, 0.95);
             text-shadow:1px 1px 2px rgba(0,0,0,0.3);
-            animation: changecolor 14s infinite ease-in-out;
         }
 
-        #team_list {
-            background-color: rgba(100, 170, 75, 0.85);
+        main {
+            background-color: rgb(215, 234, 234);
+        }
+
+        main h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        #CEO_list, main h2 {
+            display: flex;
+            justify-content: center;
             padding: 20px;
-            margin: 5px;
+            margin: auto;
+            animation: changecolor 8s infinite ease-in-out;
         }
 
         .Impressum {
@@ -65,13 +69,13 @@
 
         @keyframes changecolor {
             0% {
-                background-color: rgba(91, 170, 76, 0.9);
+                background-color: rgba(54, 172, 255, 1);
             }
             50% {
-                background-color: rgba(94, 172, 80, 0.9);
+                background-color: rgba(104, 172, 255, 1);
             }
             100% {
-                background-color: rgba(91, 170, 76, 0.9);
+                background-color: rgba(54, 172, 255, 1);
             }
         }
 
@@ -86,7 +90,6 @@
                 background-color: rgba(176, 202, 236, 0.85);
             }
         }
-
     </style>
 </body>
 </html>
