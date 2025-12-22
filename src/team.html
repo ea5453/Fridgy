@@ -101,7 +101,6 @@
                         </tr>
                     </tbody>
                 </table>
-            
             </div>
                 
 
@@ -128,7 +127,6 @@
                     </tbody>
                 </table>
             </div>
-
 
 
 
@@ -178,6 +176,7 @@
         }
 
         body {
+            max-width:100%;
             animation: backgroundchange 5s ease-in-out infinite;
         }
 
@@ -263,17 +262,22 @@
             width: 70%;
             margin: 2%;
         }
+
       
         #ManagerPic{
-            height: 50px;
-            width: 50px;
             color: black;
         }
-        
 
-        .tables, .tablesr {
-            width: 130%;
+
+        .tables  {
+            width: 50%;
             transform: translateX(-12.5%);
+        }
+
+
+        .tablesr {
+            width: 50%;
+            transform: translateX(100%);
         }
 
                 
@@ -308,19 +312,7 @@
             justify-content: space-around;
         }
 
-
-      
         
-        @keyframes movetable {
-            from {
-                transform: translateX(5px);
-            } 
-
-            to {
-                transform: translateX(-5px);
-            }
-        }
-
         @keyframes changecolor {
             0% {
                 background-color: rgba(91, 170, 76, 0.9);
@@ -342,6 +334,94 @@
             }
             100% {
                 background-color: rgba(176, 202, 236, 0.85);
+            }
+        }
+
+
+        @media (max-width: 550px) {
+            body {
+                max-width:100%;
+                animation: backgroundchange 5s ease-in-out infinite;
+            }
+
+
+            header, main, footer {
+                position: absolute;
+                font-size: 12px;
+                background-color: rgba(91, 160, 76, 0.85);
+                margin: 0px;
+                padding: 0px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            
+            footer, header {
+                height: 40%;
+                width: 100%;
+            }
+
+            
+            main {
+                display: block;
+                text-align: center;
+                width: 100%;
+                padding: 5px;
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: -10px;
+                gap: 10px;
+                background-color: rgba(100,170,80, 0.5);
+            }
+            
+            #reiter_list {
+                flex: 1;
+                background-color: rgba(125, 202, 110, 0.8);
+                width: 100%;
+                padding: 2%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .tablespacer {
+                width: 100%;     
+                margin: 0;         
+            }
+
+            table {
+                width: 100%;  
+                padding: 10px; 
+            }
+
+            .tables, .tablesr {
+                width: 100%;      
+                transform: translateX(0); 
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+            }
+
+            @keyframes changecolor {
+                0% {
+                    background-color: rgba(91, 170, 76, 0.9);
+                }
+                50% {
+                    background-color: rgba(94, 172, 80, 0.9);
+                }
+                100% {
+                    background-color: rgba(91, 170, 76, 0.9);
+                }
             }
         }
 
