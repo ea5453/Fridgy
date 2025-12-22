@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
+    <title>Download</title>
 </head>
 <body>
     <header>
@@ -22,19 +21,20 @@
                 <li><a href="download.html">Download</a></li>
             </ul>
         </div>
-        <h1>Kontakt</h1>
+        <h1>Download</h1>
     </header>
 
     <main>
-        <h2>CEO</h2>
-        <div id="CEO_list">
-            <p>Muhammet Altuntas</p>
+        <div>
+            
         </div>
-        <p id="contact_ceo">Kontakt: Fridgy@junior-company.at</p>
+
+        <div class="Logo-r">
+            <!--<img src="/src/images/logo.png" alt="Logo">-->
+        </div>
     </main>
 
     <footer>
-        <hr>
         <div class="Impressum">
             <div>Geografische Lage:<br>HTL-Rankweil<br>Negrellistraße 51</div>
             <div>Kontakt:<br>Fridgy@junior-company.at</div>
@@ -47,28 +47,24 @@
         }
 
         body {
-            height: 100%;
             animation: backgroundchange 5s ease-in-out infinite;
         }
 
         header, main, footer {
-            font-size: 20px;
+            font-size: 20px;    
             background-color: rgba(91, 165, 76, 0.9);
             margin: 7.5px;
             padding: 7.5px;
             color: rgba(255, 255, 255, 0.95);
             text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+            animation: changecolor 11s infinite ease-in-out;
         }
-
+        
         main {
-            background-color: rgb(215, 234, 234);
-            font-size: 22px;
-        }
-
-        main h2 {
             display: flex;
             justify-content: center;
         }
+
 
         header {
             top: 0%;
@@ -95,37 +91,22 @@
             justify-content: space-around;
         }
 
-        #CEO_list, main h2 {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            margin: auto;
-            animation: changecolor 8s infinite ease-in-out;
-        }
-
-        main #contact_ceo {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            margin: auto;
-            animation: changecolor 8s infinite ease-in-out;
-        }
 
         .Impressum {
             display: flex;
             justify-content: space-around;
         }
-        
+
 
         @keyframes changecolor {
             0% {
-                background-color: rgba(54, 172, 255, 1);
+                background-color: rgba(91, 170, 76, 0.9);
             }
             50% {
-                background-color: rgba(104, 172, 255, 1);
+                background-color: rgba(94, 172, 80, 0.9);
             }
             100% {
-                background-color: rgba(54, 172, 255, 1);
+                background-color: rgba(91, 170, 76, 0.9);
             }
         }
 
@@ -142,38 +123,73 @@
         }
 
         @media (max-width: 550px) {
-            header, main, footer {
-                font-size: 12px;
-                background-color: rgba(91, 160, 76, 0.85);
-                margin: 5px;
-                padding: 5px;
-                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
-            }
-
-            .Logo img{
-                display: block;
-            }
-
-            .Reiter {
-                top: 0%;
-                position:sticky;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                margin: -10px;
-                gap: 20px;
-                background-color: rgba(100,170,80, 0.5);
-            }
-            
-            #reiter_list {
-                flex: 1;
-                background-color: rgba(125, 202, 110, 0.8);
-                width: 100%;
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
-            }
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+            
+            animation: backgroundchange 5s ease-in-out infinite;
+        }
+
+        header, main, footer {
+            font-size: 12px;    
+            background-color: rgba(91, 165, 76, 0.9);
+            margin: 6.8px;
+            padding: 6.8px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+            animation: changecolor 11s infinite ease-in-out;
+        }
+
+
+        footer, header {
+            height: 40%;
+            width: 95%;
+        }
+
+        
+        main {
+            display: block;
+            text-align: center;
+            width: 95%;
+            padding: 10px;
+        }
+
+
+        header {
+            top: 0%;
+        }
+
+        .Reiter {
+            top: 0%;
+            position:sticky;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(100,170,80, 0.5);
+        }
+        
+        #reiter_list {
+            background-color: rgba(125, 202, 110, 0.8);
+            width: 100%;
+            padding: 3%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .Logo-r img{
+            display: block;
+        }
+
+        .Logo {
+            
+        }
+
+        .Impressum {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
     </style>
 </body>
 </html>
