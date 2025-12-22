@@ -8,12 +8,17 @@
 <body>
     <header>
         <div class="Reiter">
+            <div class="Logo">
+                <img src="/src/images/Logo_Reiter.png" alt="Logo">
+            </div>
+
             <ul id="reiter_list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://www.instagram.com/fridgy_company/" target="_blank">Instagram</a></li>
                 <li><a href="team.html">Unser Team</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="" target="_blank">Facebook</a></li>
+                <li><a href="download.html">Download</a></li>
             </ul>
         </div>
         <h1>Hier ist unser Team</h1>
@@ -196,13 +201,21 @@
             top: 0%;
         }
 
+        .Logo img{
+            display: block;
+        }
+
         .Reiter {
             top: 0%;
             position:sticky;
+            display: flex;
+            align-items: center;
+            gap: 20px;
             background-color: rgba(100,170,80, 0.5);
         }
         
         #reiter_list {
+            flex: 1;
             background-color: rgba(125, 202, 110, 0.8);
             padding: 2%;
             display: flex;

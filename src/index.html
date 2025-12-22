@@ -7,13 +7,20 @@
 </head>
 <body>
     <header>
+        
         <div class="Reiter">
+            <div class="Logo">
+                <img src="/src/images/Logo_Reiter.png" alt="Logo">
+            </div>
+                
             <ul id="reiter_list">
+                
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://www.instagram.com/fridgy_company/" target="_blank">Instagram</a></li>
                 <li><a href="team.html">Unser Team</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="" target="_blank">Facebook</a></li>
+                <li><a href="download.html">Download</a></li>
             </ul>
         </div>
         <h1>Fridgy</h1>
@@ -94,13 +101,21 @@
             top: 0%;
         }
 
+        .Logo img{
+            display: block;
+        }
+
         .Reiter {
             top: 0%;
             position:sticky;
+            display: flex;
+            align-items: center;
+            gap: 20px;
             background-color: rgba(100,170,80, 0.5);
         }
         
         #reiter_list {
+            flex: 1;
             background-color: rgba(125, 202, 110, 0.8);
             padding: 2%;
             display: flex;
@@ -146,13 +161,37 @@
             }
         }
 
-        @media (max-width: 780px) {
+        @media (max-width: 550px) {
             header, main, footer {
-                font-size: 16.5px;
+                font-size: 12px;
                 background-color: rgba(91, 160, 76, 0.85);
                 margin: 5px;
                 padding: 5px;
                 text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: -10px;
+                gap: 20px;
+                background-color: rgba(100,170,80, 0.5);
+            }
+            
+            #reiter_list {
+                flex: 1;
+                background-color: rgba(125, 202, 110, 0.8);
+                width: 100%;
+                padding: 2%;
+                display: flex;
+                justify-content: space-around;
             }
 
             #groups_list, #principle {     
@@ -191,7 +230,6 @@
             }
         }
 
-        /*TODO:Link auf insta und das Impressum sollte gerade.*/
     </style>
 
     <script src="main.js">
