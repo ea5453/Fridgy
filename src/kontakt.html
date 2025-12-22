@@ -13,9 +13,9 @@
     <main>
         <h2>CEO</h2>
         <div id="CEO_list">
-            <p style="font-size: 20px;">Muhammet Altuntas</p>
+            <p>Muhammet Altuntas</p>
         </div>
-        
+        <p id="contact_ceo">Kontakt: Fridgy@junior-company.at</p>
     </main>
 
     <footer>
@@ -46,6 +46,7 @@
 
         main {
             background-color: rgb(215, 234, 234);
+            font-size: 22px;
         }
 
         main h2 {
@@ -54,6 +55,14 @@
         }
 
         #CEO_list, main h2 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: auto;
+            animation: changecolor 8s infinite ease-in-out;
+        }
+
+        main #contact_ceo {
             display: flex;
             justify-content: center;
             padding: 20px;
