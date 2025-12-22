@@ -10,6 +10,9 @@
         <div class="Reiter">
             <ul id="reiter_list">
                 <li><a href="https://www.instagram.com/fridgy_company/" target="_blank">Instagram</a></li>
+                <li><a href="/team.html">Unser Team</a></li>
+                <li><a href="" target="_blank">Kontakt</a></li>
+                <li><a href="" target="_blank">Facebook</a></li>
             </ul>
         </div>
         <h1>Fridgy</h1>
@@ -91,9 +94,20 @@
         }
 
         .Reiter {
+            top: 0%;
+            position:sticky;
             background-color: rgba(100,170,80, 0.6);
         }
         
+        #reiter_list {
+            
+            background-color: rgba(100,180,100, 0.5);
+            box-shadow: 0.8px 0.8px 1.2px 1.2px;
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
+        }
+
         #groups_list, #principle {              
             padding: 20px;
             animation: changecolor 14s ease-in-out infinite;
@@ -167,29 +181,22 @@
 
             @keyframes changecolor {
                 0% {
-                    background-color: rgba(91, 160, 76, 1);
-                    color: rgba(255, 255, 255, 0.9); 
+                    background-color: rgba(91, 170, 76, 0.9);
                 }
-
                 50% {
-                    background-color: rgba(91, 170, 76, 1);
-                    color: rgba(255, 250, 200, 1); 
+                    background-color: rgba(94, 172, 80, 0.9);
                 }
-
                 100% {
-                    background-color: rgba(91, 160, 76, 1);
-                    color: rgba(255, 250, 255, 0.9); 
+                    background-color: rgba(91, 170, 76, 0.9);
                 }
             }
         }
 
-
-       
-
-
-        
-
         /*TODO:Link auf insta und das Impressum sollte gerade.*/
     </style>
+
+    <script src="main.js">
+
+    </script>
 </body>
 </html>
