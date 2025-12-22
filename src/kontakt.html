@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <header>
+        <div class="Reiter">
+            <ul id="reiter_list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.instagram.com/fridgy_company/" target="_blank">Instagram</a></li>
+                <li><a href="team.html">Unser Team</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
         <h1>Kontakt</h1>
     </header>
 
@@ -32,11 +42,12 @@
         }
 
         body {
+            height: 100%;
             animation: backgroundchange 5s ease-in-out infinite;
         }
 
         header, main, footer {
-            font-size: 18px;
+            font-size: 20px;
             background-color: rgba(91, 165, 76, 0.9);
             margin: 7.5px;
             padding: 7.5px;
@@ -52,6 +63,23 @@
         main h2 {
             display: flex;
             justify-content: center;
+        }
+
+        header {
+            top: 0%;
+        }
+
+        .Reiter {
+            top: 0%;
+            position:sticky;
+            background-color: rgba(100,170,80, 0.5);
+        }
+        
+        #reiter_list {
+            background-color: rgba(125, 202, 110, 0.8);
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
         }
 
         #CEO_list, main h2 {
