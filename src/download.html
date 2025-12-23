@@ -42,154 +42,161 @@
     </footer>
 
     <style>
+        :root {
+            --bg-main: #f3efe7;          /* Seitenhintergrund (Beige) */
+            --bg-section: #d6cbbb;       /* Header / Main / Footer */
+            --bg-nav: #c2b59b;           /* Navigation und Reiter */
+            --bg-box: #e6ded2;           /* Boxen und Listen */
+            --bg-accent: #b8a98f;        /* Akzent-Holzton für sonstiges */
+            --text-main: #3e3a32;        /* Dunkles Braun für die Texte */
+            --text-light: #ffffffee;
+        }
+
+
         * {
             box-sizing: border-box;
         }
 
         body {
+            background-color: var(--bg-main);
             animation: backgroundchange 5s ease-in-out infinite;
         }
 
         header, main, footer {
-            font-size: 20px;    
-            background-color: rgba(91, 165, 76, 0.9);
+            font-size: 20px;
+            background-color: var(--bg-section);
             margin: 7.5px;
             padding: 7.5px;
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+            color: var(--text-main);
+            text-shadow: none;
             animation: changecolor 11s infinite ease-in-out;
         }
-        
+
         main {
             display: flex;
             justify-content: center;
         }
 
-
         header {
             top: 0%;
         }
 
-        .Logo img{
+        .Logo img {
             display: block;
         }
 
         .Reiter {
             top: 0%;
-            position:sticky;
+            position: sticky;
             display: flex;
             align-items: center;
             gap: 20px;
-            background-color: rgba(100,170,80, 0.5);
+            background-color: var(--bg-nav);
         }
-        
+
         #reiter_list {
             flex: 1;
-            background-color: rgba(125, 202, 110, 0.8);
+            background-color: var(--bg-accent);
             padding: 2%;
             display: flex;
             justify-content: space-around;
         }
 
-
         .Impressum {
             display: flex;
             justify-content: space-around;
+            background-color: var(--bg-box);
+            color: var(--text-main);
         }
-
 
         @keyframes changecolor {
             0% {
-                background-color: rgba(91, 170, 76, 0.9);
+                background-color: var(--bg-section);
             }
             50% {
-                background-color: rgba(94, 172, 80, 0.9);
+                background-color: #d0c4b2;
             }
             100% {
-                background-color: rgba(91, 170, 76, 0.9);
+                background-color: var(--bg-section);
             }
         }
 
         @keyframes backgroundchange {
             0% {
-                background-color: rgba(176, 202, 236, 0.85);
+                background-color: var(--bg-main);
             }
             50% {
-                background-color: rgba(176, 202, 226, 0.85);
+                background-color: #ede6da;
             }
             100% {
-                background-color: rgba(176, 202, 236, 0.85);
+                background-color: var(--bg-main);
             }
         }
 
         @media (max-width: 550px) {
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            
-            animation: backgroundchange 5s ease-in-out infinite;
-        }
+            * {
+                box-sizing: border-box;
+            }
 
-        header, main, footer {
-            font-size: 12px;    
-            background-color: rgba(91, 165, 76, 0.9);
-            margin: 6.8px;
-            padding: 6.8px;
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow:1px 1px 2px rgba(0,0,0,0.3);
-            animation: changecolor 11s infinite ease-in-out;
-        }
+            body {
+                background-color: var(--bg-main);
+                animation: backgroundchange 5s ease-in-out infinite;
+            }
 
+            header, main, footer {
+                font-size: 12px;
+                background-color: var(--bg-section);
+                margin: 6.8px;
+                padding: 6.8px;
+                color: var(--text-main);
+                text-shadow: none;
+                animation: changecolor 11s infinite ease-in-out;
+            }
 
-        footer, header {
-            height: 40%;
-            width: 95%;
-        }
+            footer, header {
+                height: 40%;
+                width: 95%;
+            }
 
-        
-        main {
-            display: block;
-            text-align: center;
-            width: 95%;
-            padding: 10px;
-        }
+            main {
+                display: block;
+                text-align: center;
+                width: 95%;
+                padding: 10px;
+            }
 
+            header {
+                top: 0%;
+            }
 
-        header {
-            top: 0%;
-        }
+            .Reiter {
+                top: 0%;
+                position: sticky;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-nav);
+            }
 
-        .Reiter {
-            top: 0%;
-            position:sticky;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(100,170,80, 0.5);
-        }
-        
-        #reiter_list {
-            background-color: rgba(125, 202, 110, 0.8);
-            width: 100%;
-            padding: 3%;
-            display: flex;
-            justify-content: space-around;
-        }
+            #reiter_list {
+                background-color: var(--bg-accent);
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                justify-content: space-around;
+            }
 
-        .Logo-r img{
-            display: block;
-        }
+            .Logo-r img {
+                display: block;
+            }
 
-        .Logo {
-            
+            .Impressum {
+                display: flex;
+                justify-content: space-around;
+                background-color: var(--bg-box);
+                color: var(--text-main);
+            }
         }
-
-        .Impressum {
-            display: flex;
-            justify-content: space-around;
-        }
-    }
     </style>
 </body>
 </html>

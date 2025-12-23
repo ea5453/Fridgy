@@ -79,6 +79,17 @@
     
 
     <style>
+        :root {
+            --bg-main: #f3efe7;          /* Seitenhintergrund (Beige) */
+            --bg-section: #d6cbbb;       /* Header / Main / Footer */
+            --bg-nav: #c2b59b;           /* Navigation / Reiter */
+            --bg-box: #e6ded2;           /* Boxen / Listen */
+            --bg-accent: #b8a98f;        /* Akzent-Holzton */
+            --text-main: #3e3a32;        /* Dunkles Braun für Text */
+            --text-light: #ffffffee;
+        }
+
+
         * {
             box-sizing: border-box;
         }
@@ -90,11 +101,15 @@
 
         header, main, footer {
             font-size: 20px;
-            background-color: rgba(91, 165, 76, 0.9);
+            background-color: var(--bg-section);
             margin: 7.5px;
             padding: 7.5px;
             color: rgba(255, 255, 255, 0.95);
             text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        main p {
+            color: var(--text-main);
         }
 
         header {
@@ -111,12 +126,12 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            background-color: rgba(100,170,80, 0.5);
+            background-color: var(--bg-nav);
         }
         
         #reiter_list {
             flex: 1;
-            background-color: rgba(125, 202, 110, 0.8);
+            background-color: var(--bg-accent);
             padding: 2%;
             display: flex;
             justify-content: space-around;
@@ -124,10 +139,13 @@
 
         #groups_list, #principle {              
             padding: 20px;
+            color: var(--text-main);
             animation: changecolor 14s ease-in-out infinite;
         }
 
         .description p {
+            background-color: var(--bg-box);
+            color: var(--text-main);
             padding: 20px;
             animation: changecolor 14s ease-in-out infinite;
         }
@@ -135,18 +153,13 @@
         .Impressum {
             display: flex;
             justify-content: space-around;
+            background-color: var(--bg-accent);
         }
 
         @keyframes changecolor {
-            0% {
-                background-color: rgba(91, 170, 76, 0.9);
-            }
-            50% {
-                background-color: rgba(94, 172, 80, 0.9);
-            }
-            100% {
-                background-color: rgba(91, 170, 76, 0.9);
-            }
+            0%   { background-color: #f3efe7; }
+            50%  { background-color: #ede6da; }
+            100% { background-color: #f3efe7; }
         }
 
         @keyframes backgroundchange {
@@ -164,7 +177,7 @@
         @media (max-width: 550px) {
             header, main, footer {
                 font-size: 12px;
-                background-color: rgba(91, 160, 76, 0.85);
+                background-color: var(--bg-section);
                 margin: 5px;
                 padding: 5px;
                 text-shadow:1px 1px 2px rgba(0,0,0,0.4);
@@ -182,12 +195,12 @@
                 flex-direction: column;
                 margin: -10px;
                 gap: 20px;
-                background-color: rgba(100,170,80, 0.5);
+                background-color: var(--bg-nav);
             }
             
             #reiter_list {
                 flex: 1;
-                background-color: rgba(125, 202, 110, 0.8);
+                background-color: var(--bg-accent);
                 width: 100%;
                 padding: 2%;
                 display: flex;
@@ -199,6 +212,7 @@
                 flex-direction: row;
                 gap: 15px;         
                 padding: 15px;
+                color: var(--text-main);
                 animation: changecolor 5.5s ease-in-out infinite alternate;
                 list-style: none;
             }
@@ -208,6 +222,8 @@
             }
 
             .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
                 padding: 15px;
                 animation: changecolor 5.5s ease-in-out infinite alternate;
             }
@@ -215,18 +231,13 @@
             .Impressum {
                 display: flex;
                 flex-direction: column;
+                background-color: var(--bg-accent);
             }
 
             @keyframes changecolor {
-                0% {
-                    background-color: rgba(91, 170, 76, 0.9);
-                }
-                50% {
-                    background-color: rgba(94, 172, 80, 0.9);
-                }
-                100% {
-                    background-color: rgba(91, 170, 76, 0.9);
-                }
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
             }
         }
 
