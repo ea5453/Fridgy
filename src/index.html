@@ -67,11 +67,6 @@
         <hr>
         <div class="Impressum">
             <div>Geografische Lage:<br>HTL-Rankweil<br>Negrellistraße 51</div>
-            <div>Geschäftsführer:<br>Muhammet Altuntas</div>
-            <div>Marketing:<br>Pipic Kenan</div>
-            <div>IT:<br>Schaffer Christoph</div>
-            <div>Design: <br>Alici Emir</div>
-            <div>Finanzen:<br>Reichart Tobias <br> Walser Daniel <br> Seeberger Jakob</div>
             <div>Kontakt:<br>Fridgy@junior-company.at</div>
         </div>
 
@@ -130,11 +125,14 @@
         }
         
         #reiter_list {
+            font-size: 20px;
             flex: 1;
             background-color: var(--bg-accent);
             padding: 2%;
+            gap: 30px;
             display: flex;
             justify-content: space-around;
+            list-style: none;
         }
 
         #groups_list, #principle {              
@@ -164,17 +162,154 @@
 
         @keyframes backgroundchange {
             0% {
-                background-color: rgba(176, 202, 236, 0.85);
+                background-color: var(--bg-main);
             }
             50% {
-                background-color: rgba(176, 202, 226, 0.85);
+                background-color: #ede6da;
             }
             100% {
-                background-color: rgba(176, 202, 236, 0.85);
+                background-color: var(--bg-main);
             }
         }
 
-        @media (max-width: 550px) {
+        @media (max-width: 900px) {
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+            
+            #reiter_list {
+                font-size: 16.5px;
+                flex: 1;
+                background-color: var(--bg-accent);
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 15px;         
+                padding: 15px;
+                color: var(--text-main);
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+                list-style: none;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-accent);
+            }
+
+            @keyframes changecolor {
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
+            }
+
+        }
+
+        @media (max-width: 780px) {
+            header, main, footer {
+                font-size: 18px;
+                background-color: var(--bg-section);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+            
+            #reiter_list {
+                flex: 1;
+                font-size: 14.5px;
+                background-color: var(--bg-accent);
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 15px;         
+                padding: 15px;
+                color: var(--text-main);
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+                list-style: none;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-accent);
+            }
+
+            @keyframes changecolor {
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
+            }
+        }
+
+        @media (max-width: 580px) {
             header, main, footer {
                 font-size: 12px;
                 background-color: var(--bg-section);
@@ -193,18 +328,20 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                margin: -10px;
-                gap: 20px;
+                margin: 5px;
+                gap: 25px;
                 background-color: var(--bg-nav);
             }
             
             #reiter_list {
-                flex: 1;
-                background-color: var(--bg-accent);
+                flex-direction: column;
                 width: 100%;
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #reiter_list li {
+                text-align: center;
             }
 
             #groups_list, #principle {     
@@ -214,7 +351,6 @@
                 padding: 15px;
                 color: var(--text-main);
                 animation: changecolor 5.5s ease-in-out infinite alternate;
-                list-style: none;
             }
 
             #group_list li {

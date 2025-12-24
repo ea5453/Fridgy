@@ -154,6 +154,13 @@
                                       jakob.seeberger@htl-rankweil.at
                                     </a>
                                 </p>
+
+                                <strong>Daniel Walser</strong>
+                                <p>
+                                    <a href="mailto:daniel.walser@htl-rankweil.at?subject=Betreff&body=Text">
+                                      daniel.walser@htl-rankweil.at
+                                    </a>
+                                </p>
                             </td>
                         </tr>
                     </tbody>
@@ -225,11 +232,14 @@
         }
 
         #reiter_list {
+            font-size: 20px;
             flex: 1;
             background-color: var(--bg-accent);
             padding: 2%;
+            gap: 30px;
             display: flex;
             justify-content: space-around;
+            list-style: none;
         }
 
         table {
@@ -329,94 +339,123 @@
             }
         }
 
-        @media (max-width: 550px) {
 
-            body {
-                max-width: 100%;
-                background-color: var(--bg-main);
-                animation: backgroundchange 5s ease-in-out infinite;
-            }
+        @media (max-width: 900px) {
 
             header, main, footer {
-                position: absolute;
-                font-size: 12px;
-                background-color: var(--bg-section);
-                margin: 0px;
-                padding: 0px;
-                color: var(--text-main);
-                text-shadow: none;
-            }
-
-            footer, header {
-                height: 40%;
-                width: 100%;
-            }
-
-            main {
-                display: block;
-                text-align: center;
-                width: 100%;
-                padding: 5px;
-            }
-
-            .Logo img {
-                display: block;
-            }
-
-            .Reiter {
-                top: 0%;
-                position: sticky;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                margin: -10px;
-                gap: 10px;
-                background-color: var(--bg-nav);
+                font-size: 19px;
+                margin: 5px;
+                padding: 10px;
             }
 
             #reiter_list {
-                flex: 1;
-                background-color: var(--bg-accent);
-                width: 100%;
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
+                font-size: 16.5px;
+                gap: 15px;
+                padding: 10px;
             }
 
             .tablespacer {
                 width: 100%;
-                margin: 0;
             }
 
             table {
-                width: 100%;
-                padding: 10px;
+                width: 90%;
             }
 
-            .tables, .tablesr {
+            .tables,
+            .tablesr {
                 width: 100%;
                 transform: translateX(0);
             }
 
-            .Impressum {
-                display: flex;
-                flex-direction: column;
-                background-color: var(--bg-box);
-                color: var(--text-main);
-            }
-
-            @keyframes changecolor {
-                0% {
-                    background-color: var(--bg-section);
-                }
-                50% {
-                    background-color: #d0c4b2;
-                }
-                100% {
-                    background-color: var(--bg-section);
-                }
+            
+            .tablespacer .tables table,
+            .tablespacer .tablesr table {
+                transform: translateX(0);
+                opacity: 1;
             }
         }
+
+        @media (max-width:780px) {
+
+            header, main, footer {
+                font-size: 19px;
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+
+            #reiter_list {
+                font-size: 14.5px;
+                gap: 0px;
+                padding: 10px;
+            }
+
+            .tablespacer {
+                width: 100%;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            .tables,
+            .tablesr {
+                width: 100%;
+                transform: translateX(0);
+            }
+
+            
+            .tablespacer .tables table,
+            .tablespacer .tablesr table {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 580px) {
+
+            header, main, footer {
+                font-size: 14px;
+                margin: 5px;
+                padding: 10px;
+            }
+
+            .Reiter {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            #reiter_list {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #reiter_list li {
+                text-align: center;
+            }
+
+            .Impressum {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+
 
     </style>
 </body>

@@ -101,11 +101,14 @@
         }
 
         #reiter_list {
+            font-size: 20px;
             flex: 1;
             background-color: var(--bg-accent);
             padding: 2%;
+            gap: 30px;
             display: flex;
             justify-content: space-around;
+            list-style: none;
         }
 
         #CEO_list,
@@ -156,6 +159,73 @@
             }
         }
 
+        @media (max-width: 900px) {
+            body {
+                height: 100%;
+                background-color: var(--bg-main);
+                animation: backgroundchange 5s ease-in-out infinite;
+            }
+
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 7.5px;
+                padding: 7.5px;
+                color: var(--text-main);
+                text-shadow: none;
+            }
+
+            #reiter_list {
+                font-size: 16.5px;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            main {
+                background-color: var(--bg-box);
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 780px) {
+            body {
+                height: 100%;
+                background-color: var(--bg-main);
+                animation: backgroundchange 5s ease-in-out infinite;
+            }
+
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 7.5px;
+                padding: 7.5px;
+                color: var(--text-main);
+                text-shadow: none;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+
+            #reiter_list {
+                font-size: 14.5px;
+                gap: 0px;
+                padding: 10px;
+            }
+
+            main {
+                background-color: var(--bg-box);
+                font-size: 20px;
+            }
+        }
+
         @media (max-width: 550px) {
 
             header, main, footer {
@@ -183,12 +253,14 @@
             }
 
             #reiter_list {
-                flex: 1;
-                background-color: var(--bg-accent);
+                flex-direction: column;
                 width: 100%;
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #reiter_list li {
+                text-align: center;
             }
         }
     </style>

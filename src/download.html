@@ -95,11 +95,13 @@
         }
 
         #reiter_list {
+            font-size: 20px;
             flex: 1;
             background-color: var(--bg-accent);
             padding: 2%;
             display: flex;
             justify-content: space-around;
+            list-style: none;
         }
 
         .Impressum {
@@ -133,16 +135,51 @@
             }
         }
 
+        @media (max-width: 900px) {
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 7.5px;
+                padding: 7.5px;
+                color: var(--text-main);
+                text-shadow: none;
+                animation: changecolor 11s infinite ease-in-out;
+            }
+
+            #reiter_list {
+                font-size: 15.5px;
+                flex: 1;
+                background-color: var(--bg-accent);
+                padding: 2%;
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+            }
+        }
+
+        @media (max-width: 780px) {
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 7.5px;
+                padding: 7.5px;
+                color: var(--text-main);
+                text-shadow: none;
+                animation: changecolor 11s infinite ease-in-out;
+            }
+
+            #reiter_list {
+                font-size: 14.5px;
+                flex: 1;
+                background-color: var(--bg-accent);
+                padding: 2%;
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+            }
+        }
+
         @media (max-width: 550px) {
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                background-color: var(--bg-main);
-                animation: backgroundchange 5s ease-in-out infinite;
-            }
 
             header, main, footer {
                 font-size: 12px;
@@ -154,22 +191,6 @@
                 animation: changecolor 11s infinite ease-in-out;
             }
 
-            footer, header {
-                height: 40%;
-                width: 95%;
-            }
-
-            main {
-                display: block;
-                text-align: center;
-                width: 95%;
-                padding: 10px;
-            }
-
-            header {
-                top: 0%;
-            }
-
             .Reiter {
                 top: 0%;
                 position: sticky;
@@ -179,11 +200,14 @@
             }
 
             #reiter_list {
-                background-color: var(--bg-accent);
+                flex-direction: column;
                 width: 100%;
-                padding: 3%;
-                display: flex;
-                justify-content: space-around;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #reiter_list li {
+                text-align: center;
             }
 
             .Logo-r img {
