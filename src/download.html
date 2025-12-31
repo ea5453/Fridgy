@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download</title>
+    
 </head>
 <body>
     <header>
@@ -21,12 +22,12 @@
                 <li><a href="download.html">Download</a></li>
             </ul>
         </div>
-        <h1>Download</h1>
+        <h1 id="Whereweat">Download</h1>
     </header>
 
     <main>
         <div>
-            
+            <p>Bald da wenn Christoff es endlich mal fertig macht</p>
         </div>
 
         <div class="Logo-r">
@@ -43,184 +44,210 @@
 
     <style>
         :root {
-            --bg-main: #f3efe7;          /* Seitenhintergrund (Beige) */
-            --bg-section: #d6cbbb;       /* Header / Main / Footer */
-            --bg-nav: #c2b59b;           /* Navigation und Reiter */
-            --bg-box: #e6ded2;           /* Boxen und Listen */
-            --bg-accent: #b8a98f;        /* Akzent-Holzton für sonstiges */
-            --text-main: #3e3a32;        /* Dunkles Braun für die Texte */
-            --text-light: #ffffffee;
-        }
+    --bg-main: #ECFFE8;
+  --bg-section:#CFF4C8;
+  --bg-nav:   #0B5D2A;
+  --bg-box:   #94c58e;
+  --bg-accent:#56a567;
+
+  --text-main:#0C2214;
+  --text-muted:#2B5B3D;
+
+  --border: rgba(62, 58, 50, 0.25);
+  --shadow: 0 10px 28px rgba(0,0,0,0.08);
+
+  --radius: 16px;
+  --container: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Sections */
+#Whereweat {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+      max-width: var(--container);
+      margin: 12px auto;
+      padding: 18px;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
 
-        * {
-            box-sizing: border-box;
-        }
+    header {
+      max-width: 90vi;
+      margin: 30px auto;
+      padding: 18px;
+      background: var(--bg-main);
+      color: rgb(2, 42, 11);
 
-        body {
-            background-color: var(--bg-main);
-            animation: backgroundchange 5s ease-in-out infinite;
-        }
 
-        header, main, footer {
-            font-size: 20px;
-            background-color: var(--bg-section);
-            margin: 7.5px;
-            padding: 7.5px;
-            color: var(--text-main);
-            text-shadow: none;
-            animation: changecolor 11s infinite ease-in-out;
-        }
+    }
+main{
+  max-width: var(--container);
+  margin: 12px auto;
+  padding: 18px;
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
-        main {
-            display: flex;
-            justify-content: center;
-        }
+h1 {
+  margin: 14px 0 6px;
+  font-size: clamp(22px, 3vw, 34px);
+}
 
-        header {
-            top: 0%;
-        }
+/* ===== Navigation (Reiter) ===== */
+.Reiter {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-        .Logo img {
-            display: block;
-        }
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
-        .Reiter {
-            top: 0%;
-            position: sticky;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background-color: var(--bg-nav);
-        }
+  padding: 10px 12px;
+  background: var(--bg-nav);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
-        #reiter_list {
-            font-size: 20px;
-            flex: 1;
-            background-color: var(--bg-accent);
-            padding: 2%;
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-        }
+.Logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
 
-        .Impressum {
-            display: flex;
-            justify-content: space-around;
-            background-color: var(--bg-box);
-            color: var(--text-main);
-        }
+#reiter_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-        @keyframes changecolor {
-            0% {
-                background-color: var(--bg-section);
-            }
-            50% {
-                background-color: #d0c4b2;
-            }
-            100% {
-                background-color: var(--bg-section);
-            }
-        }
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
 
-        @keyframes backgroundchange {
-            0% {
-                background-color: var(--bg-main);
-            }
-            50% {
-                background-color: #ede6da;
-            }
-            100% {
-                background-color: var(--bg-main);
-            }
-        }
+#reiter_list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 12px;
 
-        @media (max-width: 900px) {
-            header, main, footer {
-                font-size: 19px;
-                background-color: var(--bg-section);
-                margin: 7.5px;
-                padding: 7.5px;
-                color: var(--text-main);
-                text-shadow: none;
-                animation: changecolor 11s infinite ease-in-out;
-            }
+  border-radius: 999px;
+  background: var(--bg-accent);
+  border: 1px solid var(--border);
 
-            #reiter_list {
-                font-size: 15.5px;
-                flex: 1;
-                background-color: var(--bg-accent);
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
-                list-style: none;
-            }
-        }
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-main);
+  text-decoration: none;
 
-        @media (max-width: 780px) {
-            header, main, footer {
-                font-size: 19px;
-                background-color: var(--bg-section);
-                margin: 7.5px;
-                padding: 7.5px;
-                color: var(--text-main);
-                text-shadow: none;
-                animation: changecolor 11s infinite ease-in-out;
-            }
+  transition: transform 120ms ease, filter 120ms ease;
+}
 
-            #reiter_list {
-                font-size: 14.5px;
-                flex: 1;
-                background-color: var(--bg-accent);
-                padding: 2%;
-                display: flex;
-                justify-content: space-around;
-                list-style: none;
-            }
-        }
+#reiter_list a:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
 
-        @media (max-width: 550px) {
+/* ===== Download page content ===== */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  min-height: 220px;
+}
 
-            header, main, footer {
-                font-size: 12px;
-                background-color: var(--bg-section);
-                margin: 6.8px;
-                padding: 6.8px;
-                color: var(--text-main);
-                text-shadow: none;
-                animation: changecolor 11s infinite ease-in-out;
-            }
+/* Placeholder-Box, falls du später Buttons/Links reinpackst */
+main > div:first-child {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  min-height: 120px;
+}
 
-            .Reiter {
-                top: 0%;
-                position: sticky;
-                display: flex;
-                flex-direction: column;
-                background-color: var(--bg-nav);
-            }
+/* Logo area */
+.Logo-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-            #reiter_list {
-                flex-direction: column;
-                width: 100%;
-                gap: 10px;
-                padding: 10px;
-            }
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  min-height: 140px;
+}
 
-            #reiter_list li {
-                text-align: center;
-            }
+.Logo-r img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-            .Logo-r img {
-                display: block;
-            }
+/* ===== Footer ===== */
+.Impressum {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 
-            .Impressum {
-                display: flex;
-                justify-content: space-around;
-                background-color: var(--bg-box);
-                color: var(--text-main);
-            }
-        }
+  padding: 14px;
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  header, main, footer { margin: 10px; }
+  #reiter_list { justify-content: flex-start; }
+}
+
+@media (max-width: 780px) {
+  .Reiter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #reiter_list { justify-content: center; }
+  .Logo img { margin: 0 auto; }
+}
+
+@media (max-width: 580px) {
+  #reiter_list a {
+    width: 100%;
+    justify-content: center;
+  }
+  .Impressum {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
     </style>
 </body>
 </html>
