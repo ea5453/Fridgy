@@ -173,6 +173,315 @@
 
     
 
+<<<<<<< HEAD
+    <style>
+        :root {
+            --bg-main: #f3efe7;          /* Seitenhintergrund (Beige) */
+            --bg-section: #d6cbbb;       /* Header / Main / Footer */
+            --bg-nav: #c2b59b;           /* Navigation / Reiter */
+            --bg-box: #e6ded2;           /* Boxen / Listen */
+            --bg-accent: #b8a98f;        /* Akzent-Holzton */
+            --text-main: #3e3a32;        /* Dunkles Braun für Text */
+            --text-light: #ffffffee;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(240, 255, 255, 0.85);
+            animation: backgroundchange 5s ease-in-out infinite;
+        }
+
+        header, main, footer {
+            font-size: 20px;
+            background-color: var(--bg-section);
+            margin: 7.5px;
+            padding: 7.5px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        main p {
+            color: var(--text-main);
+        }
+
+        header {
+            top: 0%;
+        }
+
+        .Logo img{
+            display: block;
+        }
+
+        .Reiter {
+            top: 0%;
+            position:sticky;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: var(--bg-nav);
+        }
+        
+        #reiter_list {
+            font-size: 20px;
+            flex: 1;
+            background-color: var(--bg-accent);
+            padding: 2%;
+            gap: 30px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        #groups_list, #principle {              
+            padding: 20px;
+            color: var(--text-main);
+            animation: changecolor 14s ease-in-out infinite;
+        }
+
+        .description p {
+            background-color: var(--bg-box);
+            color: var(--text-main);
+            padding: 20px;
+            animation: changecolor 14s ease-in-out infinite;
+        }
+
+        .Impressum {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--bg-accent);
+        }
+
+        @keyframes changecolor {
+            0%   { background-color: #f3efe7; }
+            50%  { background-color: #ede6da; }
+            100% { background-color: #f3efe7; }
+        }
+
+        @keyframes backgroundchange {
+            0% {
+                background-color: var(--bg-main);
+            }
+            50% {
+                background-color: #ede6da;
+            }
+            100% {
+                background-color: var(--bg-main);
+            }
+        }
+
+        @media (max-width: 900px) {
+            header, main, footer {
+                font-size: 19px;
+                background-color: var(--bg-section);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+            
+            #reiter_list {
+                font-size: 16.5px;
+                flex: 1;
+                background-color: var(--bg-accent);
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 15px;         
+                padding: 15px;
+                color: var(--text-main);
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+                list-style: none;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-accent);
+            }
+
+            @keyframes changecolor {
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
+            }
+
+        }
+
+        @media (max-width: 780px) {
+            header, main, footer {
+                font-size: 18px;
+                background-color: var(--bg-section);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0px;
+                gap: 0px;
+                background-color: var(--bg-nav);
+            }
+            
+            #reiter_list {
+                flex: 1;
+                font-size: 14.5px;
+                background-color: var(--bg-accent);
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 15px;         
+                padding: 15px;
+                color: var(--text-main);
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+                list-style: none;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-accent);
+            }
+
+            @keyframes changecolor {
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
+            }
+        }
+
+        @media (max-width: 580px) {
+            header, main, footer {
+                font-size: 12px;
+                background-color: var(--bg-section);
+                margin: 5px;
+                padding: 5px;
+                text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+            }
+
+            .Logo img{
+                display: block;
+            }
+
+            .Reiter {
+                top: 0%;
+                position:sticky;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 5px;
+                gap: 25px;
+                background-color: var(--bg-nav);
+            }
+            
+            #reiter_list {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #reiter_list li {
+                text-align: center;
+            }
+
+            #groups_list, #principle {     
+                display: flex;
+                flex-direction: row;
+                gap: 15px;         
+                padding: 15px;
+                color: var(--text-main);
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            #group_list li {
+                flex: 1 1 auto;
+            }
+
+            .description p {
+                background-color: var(--bg-box);
+                color: var(--text-main);
+                padding: 15px;
+                animation: changecolor 5.5s ease-in-out infinite alternate;
+            }
+
+            .Impressum {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--bg-accent);
+            }
+
+            @keyframes changecolor {
+                0%   { background-color: #f3efe7; }
+                50%  { background-color: #ede6da; }
+                100% { background-color: #f3efe7; }
+            }
+        }
+
+    </style>
+
+    <script src="main.js">
+
+    </script>
+=======
     <div class="container">
         <div class="row">
             <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2"><strong>Folg uns!</strong></h3>
@@ -198,5 +507,6 @@
 </section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="page5.html" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="page5.html">Impressum</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
+>>>>>>> 691f7b0d1fd882c01abdbd9c16a5514ff0de0515
 </body>
 </html>
